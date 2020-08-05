@@ -20,6 +20,30 @@ function startGame() {
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
 }
+//timer/score
+var mainEl = document.getElementById("main");
+var timerEl = document.getElementById("countdown");
+var bodyEl = document.createElement("div");
+
+var i = 0;
+
+function prepareRead() {
+  var timeLeft = 100;
+
+  var timeInterval = setInterval(function() {
+    timerEl.textContent = timeLeft + " seconds remaining";
+    timeLeft--;
+
+    if (timeLeft === 0) {
+      timerEl.textContent = "";
+      speedRead();
+      clearInterval(timeInterval);
+    }
+
+  }, 1000);
+}
+
+
 //next btn
 function setNextQuestion() {
     resetState()
@@ -58,7 +82,6 @@ function selectAnswer(e) {
     })
     if (shuffledQuestions.length > currentQuestionIndex + 1){
         nextButton.classList.remove('hide')
-    } else
     }
 nextButton.classList.remove('hide')
 }
@@ -86,4 +109,5 @@ const questions = [
             {text: 'HTML is not an addreviation', correct: false}
         ]
     }
+    
 ]

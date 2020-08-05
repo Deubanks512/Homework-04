@@ -1,1 +1,3 @@
-# Homework-04
+Code quiz
+
+In this assignment I was given the task of creating a code  Quiz. This quiz was to include a timer, score keeper and a tracker of high scores with the ablility to take in player initials. This was a very challenging assignment for me, definetly not my best work. I had alot of trouble populating the additional questions and implimenting the other required critera. I would like more time to complete this but I will uderstand my grade. 
